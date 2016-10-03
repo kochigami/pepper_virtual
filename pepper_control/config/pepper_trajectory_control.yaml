@@ -41,8 +41,12 @@ pepper_dcm:
     joints:
       - RHand
   Wheels_controller:
-    type: position_controllers/JointTrajectoryController
+    type: effort_controllers/JointTrajectoryController
     joints:
       - WheelFL
       - WheelB
-      - WheelFR                  
+      - WheelFR  
+    gains:
+      WheelFL: {p: 10000000.0, i: 0.0, d: 1.0} 
+      WheelB: {p: 10000000.0, i: 0.0, d: 1.0}       
+      WheelFR: {p: 10000000.0, i: 0.0, d: 1.0}
